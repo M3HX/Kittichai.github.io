@@ -3,7 +3,6 @@
 /* Style the tab */
 .tab {
   float: left;
-  border: 1px solid rgb(38 38 38);
   background-color:transparent;
   width: 30%;
   height: 300px;
@@ -26,6 +25,7 @@
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
+  color: black;
 }
 
 /* Create an active/current "tab button" class */
@@ -37,11 +37,12 @@
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 1px solid rgb(38 38 38);
   width: 50%;
   border-left: none;
-  height: 300px;
-  background-color: rgb(38 38 38);
+  height: 20vw;
+  background-color: transparent;
+  /***** Section 
+  background-color: rgb(38 38 38);*****/
 }
 
 table{
@@ -60,7 +61,6 @@ td{
 }
 
 .footer {
-  margin-top: 20px;
   left: 0;
   bottom: 0;
   height: 50px;
@@ -73,5 +73,19 @@ td{
 
 #sec1{
   height: 100vh;
+}
+#sec2{
+  height: 100vh;
+}
+#sec3{
+  height: 100vh;
+}
+#sec4{
+  height: 100vh;
+}
+#sec5{
+  height: 70vh;
+  margin-bottom: 20px;
+
 }
 

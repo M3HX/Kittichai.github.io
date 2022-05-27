@@ -18,4 +18,3 @@ function openEducation(evt, Education) {
     document.getElementById(Education).style.display = "block";
     evt.currentTarget.className += " active";
   }
-
