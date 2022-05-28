@@ -8,7 +8,6 @@
     <link href="style.css" rel="stylesheet">
     <script src="index.js"></script>
 
-    <script src="vanta.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
@@ -20,6 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
 
     <style>
       img {  
@@ -50,7 +51,7 @@
               <div class="col-10 text-center">
                 <div>
                 <div id="sec1" class="place-items-center" style="margin-top: 13rem;">
-                  <p class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-violet-500 to-pink-500	uppercase" style="font-size: 10vw;" >Portfolio</p>
+                  <p class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-violet-500 to-pink-500	uppercase" style="font-size: 10vw;" id="pjs">Portfolio</p>
                   </div>       
                 </div>
 
@@ -188,14 +189,14 @@
                   </div>
 
                   <div id="sec5">
-                    <div class="text-gray-600 mt-2" >
-                        <p class="	text-8xl mb-2" id="PROJECT" style="font-size: 7vw;">MY PROJECT</p>
-                          <div class="card m-auto " style="width: 18rem;" >
+                    <div class="mt-2" >
+                        <p class="	text-8xl mb-2 bg-clip-text text-transparent bg-gradient-to-r from-slate-100 via-pink-300 to-blue-400" id="PROJECT" style="font-size: 7vw;">MY PROJECT</p>
+                          <div class="card m-auto " style="width: 18rem;border: transparent;" >
                             <img src="img/re.png" class="card-img-top" alt="...">
                               <div class="card-body text-white bg-dark">
                                  <h5 class="card-title text-lg">ระบบแจ้งซ่อมออนไลน์</h5>
-                                  <p class="card-text text-base">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                   <a href="#" class="btn btn-primary mt-2">VIEW</a>
+                                  <p class="card-text text-base">ระบบนี้เป็นส่วนหนึ่งของรายวิชา ฝึกงาน 3/64 มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา</p>
+                                   <a href="http://repair-cmu.herokuapp.com/login" class="btn btn-primary mt-2" target="_blank">View</a>
                               </div>
                           </div>
                       </div>
@@ -207,9 +208,7 @@
 
     <script>
         document.getElementById("defaultOpen").click();
-    </script> 
-         <script>
-          VANTA.NET({
+        VANTA.NET({
             el: "#portjs",
             mouseControls: true,
             touchControls: true,
@@ -219,8 +218,24 @@
             scale: 1.00,
             scaleMobile: 1.00,
             backgroundColor: 0x0
-            })
-        </script>
+            });
+            anime({
+              targets: '#pjs',
+              width: '100%', // -> from '28px' to '100%',
+              easing: 'easeInOutQuad',
+              direction: 'alternate',
+              loop: true
+            });
+            anime({
+              targets: '.test1',
+              strokeDashoffset: [anime.setDashoffset, 0],
+              easing: 'easeInOutSine',
+              duration: 1500,
+              delay: function(el, i) { return i * 250 },
+              direction: 'alternate',
+              loop: true
+            });
+    </script>
 
     <div class="footer flex flex-row justify-center items-center">
       <p class="mr-2" id="Contact">Contact : </p>

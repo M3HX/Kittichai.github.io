@@ -17,4 +17,4 @@ function openEducation(evt, Education) {
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(Education).style.display = "block";
     evt.currentTarget.className += " active";
-  }
+  };
