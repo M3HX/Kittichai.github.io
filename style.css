@@ -84,6 +84,11 @@ td{
   height: 100vh;
 }
 #sec5{
-  height: 70vh;
+  height: auto;
   margin-bottom: 20px;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
 }
