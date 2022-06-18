@@ -20,5 +20,6 @@ function openEducation(evt, Education) {
   };
 
   document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide( '#image-carousel' ).mount();
+    new Splide( '#imgshow' ).mount();
   } );
+  
